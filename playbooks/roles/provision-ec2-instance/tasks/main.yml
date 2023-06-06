@@ -33,6 +33,7 @@
   ec2_key:
     name: "{{ key_pair_name }}"
     region: "{{ ec2_region }}"
+    key_material: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
     wait: True
   register: key_pair
   tags:
