@@ -3,6 +3,7 @@
   apt:
     name: python-pip
     state: present
+  become: true
 
 - name: Upgrade pip
   pip: name=pip state=latest
