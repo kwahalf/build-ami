@@ -1,7 +1,7 @@
 ---
 - name: install python2-pip
   apt:
-    name: python2-pip
+    name: python-pip
     state: present
 
 - name: Upgrade pip
