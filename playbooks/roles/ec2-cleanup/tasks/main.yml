@@ -10,7 +10,7 @@
   register: ec2_instances
 
 - name: Delete the EC2 Instance
-  ec2:
+  ec2_instance:
     state: absent
     region: "{{ ec2_region }}"
     instance_ids: "{{ item.instance_id }}"
