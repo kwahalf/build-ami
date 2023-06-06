@@ -1,4 +1,14 @@
 ---
+- name: install python2-pip
+  yum:
+    name: python2-pip
+    state: present
+
+- name: Upgrade pip
+  pip: name=pip state=latest
+  tags:
+    - packages
+
 - name: install boto3 prerequisites
   pip:
     state: present
