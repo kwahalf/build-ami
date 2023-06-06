@@ -122,7 +122,7 @@
 
 #---- Launch EC2 instance ----
 - name: Launch an EC2 instance
-  ec2:
+  ec2_instance:
     key_name: "{{ key_pair_name }}"
     assign_public_ip: True
     vpc_subnet_id: "{{ vpc_subnets.subnets[0].subnet_id }}"
